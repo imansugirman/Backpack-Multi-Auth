@@ -1,0 +1,8 @@
+
+Route::group([
+    'namespace' => '{{singularClass}}',
+    'prefix' => '{{singularSlug}}'
+], function () {
+        Route::auth();
+        Route::get('/logout', '{{singularClass}}\Auth\LoginController@logout')->name('logout')';
+});

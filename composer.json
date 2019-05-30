@@ -1,0 +1,46 @@
+{
+    "name": "imansugirman/backpack-multiauth",
+    "description": "This package enables using for laravel-backpack.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Iman Sugirman",
+            "email": "iman.sugirman@icloud.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php" : ">=7.0",
+        "illuminate/auth": "*",
+        "illuminate/container": "*",
+        "illuminate/contracts": "*",
+        "illuminate/database": "*",
+        "illuminate/filesystem": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "laravel/laravel": "^5.8",
+        "backpack/crud": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "ImanSugirman\\LaravelBackpackAuth\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ImanSugirman\\LaravelBackpackAuth\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ImanSugirman\\LaravelBackpackAuth\\AuthServiceProvider"
+            ]
+        }
+    }
+}
